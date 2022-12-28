@@ -11,3 +11,36 @@ int main()
 
 //output
 40
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    // array declaration
+    //int arr[10];
+    int arr[]={10,20,30,40,50};//if array lelements are initialized , array dimension is optional
+    printf("%lu",sizeof(arr)); // %LU UNSIGNED LONG INTEGER , %d gives warning
+
+    return 0;
+}
+
+//output
+2
+
+
+#include <stdio.h>
+
+int main()
+{
+    // array declaration
+    //int arr[10];
+    int arr[3]={10,20,30,40,50};//displays warning with size as 3*4
+    printf("%lu",sizeof(arr)); // %LU UNSIGNED LONG INTEGER , %d gives warning
+
+    return 0;
+}
+//output
+(warning)
+12
