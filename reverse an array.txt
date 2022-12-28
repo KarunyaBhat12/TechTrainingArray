@@ -1,0 +1,43 @@
+//reverse an array by just printing value in reverse order 
+#include <stdio.h>
+int main(){
+   int size;
+   scanf("%d",&size);
+   int arr[size];
+   //getting array elements
+   for(int index=0; index<size ;index++)
+   scanf("%d",&arr[index]);
+   for(int index=size-1; index>=0 ;index--)
+   printf("%d\t",arr[index]);
+   return 0;
+}
+//output
+3
+12 23 34
+34      23      12
+
+
+//reverse an array changing original order of array (correct method)
+#include <stdio.h>
+int main(){
+   int size;
+   scanf("%d",&size);
+   int arr[size];
+   //getting array elements
+   for(int index=0; index<size ;index++)
+   scanf("%d",&arr[index]);
+   //swapping an array
+   for(int i=0,j=size-1;i<size/2;i++,j--){
+   int temp =arr[i];
+   arr[i]=arr[j];
+   arr[j]=temp;
+   }
+   // printing array elements
+   for(int index=0; index<size ;index++)
+   printf("%d\t",arr[index]);
+   return 0;
+}
+//output
+4
+10 20 30 40 
+40      30      20      10
