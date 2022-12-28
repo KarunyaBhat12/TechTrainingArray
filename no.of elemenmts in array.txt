@@ -1,0 +1,14 @@
+//how many elements are there in array
+#include <stdio.h>
+
+int main()
+{
+    int arr[]={100,12,23,34,32,34,45};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    printf("%d",size);
+
+    return 0;
+}
+
+//output
+7
