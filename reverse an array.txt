@@ -41,3 +41,27 @@ int main(){
 4
 10 20 30 40 
 40      30      20      10
+
+
+//reverse array using single line of code x=(x+y)-(y=x)
+#include <stdio.h>
+int main(){
+   int size;
+   scanf("%d",&size);
+   int arr[size];
+   //getting array elements
+   for(int index=0; index<size ;index++)
+   scanf("%d",&arr[index]);
+   //swapping an array
+   for(int i=0,j=size-1;i<size/2;i++,j--){
+       arr[i]=(arr[i]+arr[j]-(arr[j]=arr[i]));
+   }
+   // printing array elements
+   for(int index=0; index<size ;index++)
+   printf("%d\t",arr[index]);
+   return 0;
+}
+//output
+4
+10 20 30 40 
+40      30      20      10
