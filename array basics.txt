@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[10];
+    printf("%d %d",arr[0],arr[1]);
+
+    return 0;
+}
+//output will be 2 garbage values
+//output
+544928488 32602
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[10]={100};
+    printf("%d %d",arr[0],arr[1]);
+
+    return 0;
+}
+//output will be 100 and remaining values will be initialized to zero
+//output
+100 0
