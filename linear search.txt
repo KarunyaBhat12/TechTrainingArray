@@ -1,0 +1,56 @@
+// program to search an element in array using linear search
+#include<stdio.h>
+#include<stdlib.h>
+int main() {
+    int size, search_element;//to print frequency cnt=0
+    scanf("%d",&size);
+    int arr[size];
+    //getting array elements
+    for(int index=0;index<size;index++)
+    scanf("%d",&arr[index]);
+    printf("Enter the element to be searched :");
+    scanf("%d",&search_element);
+    for(int index=0;index<size;index++){
+      if(arr[index]==search_element){
+          printf("Found at %d",index); //cnt++;
+          exit(0);//terminates the application // dont write if cnt++ is there
+      }
+    }
+      printf("Element noyt found"); //printf("frequencu : %d",cnt);
+      return 0;
+}
+//output
+4
+1 2 3 4
+Enter the element to be searched :3
+Found at 2 ( position of the element 0 1 2 3)
+
+
+// program to search and count frequency of an element in array using linear search
+#include<stdio.h>
+#include<stdlib.h>
+int main() {
+    int size, search_element,cnt=0;
+    scanf("%d",&size);
+    int arr[size];
+    //getting array elements
+    for(int index=0;index<size;index++)
+    scanf("%d",&arr[index]);
+    printf("Enter the element to be searched :");
+    scanf("%d",&search_element);
+    for(int index=0;index<size;index++){
+      if(arr[index]==search_element){
+          printf(" found at %d:",index);
+           cnt++;
+          
+      }
+    }
+     printf("\nfrequency : %d",cnt);
+      return 0;
+}
+//output
+6
+12 23 34 12 12 34
+Enter the element to be searched :12
+ found at 0: found at 3: found at 4:
+frequency : 3
