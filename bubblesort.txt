@@ -1,0 +1,55 @@
+// BUBBLE SORT 
+
+#include <stdio.h>
+
+int main()
+{   
+    int i,j;
+    int arr[]={10,290,7,12,19,3,12,89,24};
+    int size= sizeof(arr)/sizeof(arr[0]); //sizeof(array)/sizeof(1st element in array)
+    //implementing bubble sort algorithm
+    // no of elements to be sorted
+    for(int i=1; i<=size-1; i++)
+       //number of elements to be compared with
+       for(int j=0; j<size-i; j++) // j=0 because comparision starts from first element i.e arr[0]
+       //in above for loop we can use j<size-1 , but it also compares already sorted values
+       if(arr[j] > arr[j+1])
+       // for decending order just put if(arr[j])<arr[j+1])
+       //swapping adjacemnt vcalues if first one is greater
+           arr[j]=arr[j] + arr[j+1]-(arr[j+1]=arr[j]);
+           //printing sorted elements
+           for(int index=0;index<size;index++)
+                printf("%d ",arr[index]);
+    return 0;
+}
+
+
+//output
+3 7 10 12 12 19 24 89 290 
+
+
+#include <stdio.h>
+
+int main()
+{   
+    int i,j;
+    int arr[]={10,290,7,12,19,3,12,89,24};
+    int size= sizeof(arr)/sizeof(arr[0]); //sizeof(array)/sizeof(1st element in array)
+    //implementing bubble sort algorithm
+    // no of elements to be sorted
+    for(int i=1; i<=size-1; i++)
+       //number of elements to be compared with
+       for(int j=0; j<size-i; j++) // j=0 because comparision starts from first element i.e arr[0]
+       //in above for loop we can use j<size-1 , but it also compares already sorted values
+       if(arr[j] < arr[j+1])
+       // for decending order just put if(arr[j])<arr[j+1])
+       //swapping adjacemnt vcalues if first one is greater
+           arr[j]=arr[j] + arr[j+1]-(arr[j+1]=arr[j]);
+           //printing sorted elements
+           for(int index=0;index<size;index++)
+                printf("%d ",arr[index]);
+    return 0;
+}
+
+//output
+290 89 24 19 12 12 10 7 3 
