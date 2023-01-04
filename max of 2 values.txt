@@ -1,0 +1,32 @@
+// max of 2 values 
+#include <stdio.h>
+
+int main()
+{   
+   int x=10, y=20;
+   // if we give printf("%d",x>Y); it will print either 1 or 0
+   switch(x>y){
+       case 1 : printf("%d is greater ",x);
+                 break;
+       default : printf("%d is greater ",y);
+   }
+    return 0;
+}
+
+//output
+20 is greater 
+
+
+
+// max of 2 values with single line of code
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{   
+   int x=10 , y=20;
+   printf("Max : %d ", ((x+y)+abs(x-y))/2); 
+   // for minimum ((x+y)-abs(x-y))/2
+    return 0;
+}
+//output
+Max : 20 
