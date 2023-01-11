@@ -1,0 +1,32 @@
+// binary search
+#include <stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+  int arr[]={10,20,30,40,50,66,77},search_element;
+  int size=sizeof(arr)/sizeof(arr[0]);
+  //getting search element from the user
+  scanf("%d",&search_element);
+  for(int lb=0,ub=size-1;lb<=ub;){
+      int mid=(lb+ub)/2;
+      if(arr[mid]==search_element){
+          printf("found @ %d",mid);
+          exit(0);//terminates the application
+      }
+      else if(arr[mid]<search_element)
+      lb=mid+1;
+  
+      else
+      ub=mid-1;
+  
+
+  printf("not found");
+
+
+    return 0;
+}
+}
+//output
+40
+found @ 3
