@@ -1,0 +1,47 @@
+// program to demonstrate pointer
+#include <stdio.h>
+
+int main()
+{
+    int x =10;
+    int *ptr;
+    ptr=&x;
+    printf("%d",*ptr);
+
+    return 0;
+}
+//output
+10
+
+// program to demonstrate pointer
+#include <stdio.h>
+
+int main()
+{
+    float x =10.5;
+    float *ptr;
+    ptr=&x;
+    printf("%f",*ptr);
+
+    return 0;
+}
+//output
+10.500000
+
+
+// program to demonstrate pointer
+#include <stdio.h>
+
+int main()
+{
+    char x ='a';
+    char *ptr;
+    ptr=&x;
+    printf("%c",*ptr);
+
+    return 0;
+}
+//output
+a
+
+

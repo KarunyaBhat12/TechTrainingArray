@@ -1,0 +1,30 @@
+// program to demonstrate void*
+#include <stdio.h>
+
+int main()
+{
+    int x =10;
+    void *ptr;
+    ptr=&x;
+    printf("%d",*(int*)ptr);
+
+    return 0;
+}
+//output
+10
+
+
+// program to demonstrate void*
+#include <stdio.h>
+
+int main()
+{
+    char x ='A';
+    void *ptr;
+    ptr=&x;
+    printf("%c",*(char*)ptr);
+
+    return 0;
+}
+//output
+A
