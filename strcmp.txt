@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    printf("%d",strcmp("Shobi","Sanjana"));
+    return 0;
+}
+// answer is 1 becoz 1st one is greater than second one
+//output
+1
