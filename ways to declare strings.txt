@@ -65,3 +65,18 @@ int main()
 //output
 admin
 aasaij
+
+//ways to declare strings
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char *username = "admin";
+    puts(username);
+    username = "aasaij";
+    puts(username);
+    return 0;
+}
+//output
+admin
+aasaij
