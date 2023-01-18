@@ -1,0 +1,67 @@
+//ways to declare strings
+#include <stdio.h>
+
+int main()
+{
+    char username[] = "admin";
+    char username[30] = "admin";
+    char username[] = {'a','d','m','i','n','\0'};
+    char *username = "admin";
+
+    return 0;
+}
+
+
+//ways to declare strings
+#include <stdio.h>
+
+int main()
+{
+    char username[] = "admin";
+    //char username[30] = "admin";
+    //char username[] = {'a','d','m','i','n','\0'};
+    //char *username = "admin";
+    puts(username);//puts() used to print string
+    username = "aasaij"; //inavlid
+    strcpy(username,"aasaij"); // same as username = "aasaij"
+    return 0;
+}
+
+
+//ways to declare strings
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char username[30] = "admin";
+    //char username[30] = "admin";
+    //char username[] = {'a','d','m','i','n','\0'};
+    //char *username = "admin";
+    puts(username);//puts() used to print string
+    //username = "aasaij"; //inavlid
+    strcpy(username,"aasaij"); // same as username = "aasaij"
+    puts(username);
+    return 0;
+}
+//output
+admin
+aasaij
+
+//ways to declare strings
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    //char username[30] = "admin";
+    //char username[30] = "admin";
+    //char username[] = {'a','d','m','i','n','\0'};
+    char *username = "admin";
+    puts(username);//puts() used to print string
+    username = "aasaij"; //inavlid
+    //strcpy(username,"aasaij"); // same as username = "aasaij"
+    puts(username);
+    return 0;
+}
+//output
+admin
+aasaij
