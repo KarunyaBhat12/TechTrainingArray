@@ -1,0 +1,353 @@
+// execute a pattern 
+#include <stdio.h>
+int main()
+{
+    // it means 20.15s, 20 is bit and 15 is precesion, 20 space is taken to print a statement, only 15 characters of string is printed , remaining characters is at the beginning
+    printf("%*.*s",20,15,"Sushma is soo pretty"); 
+    return 0;
+}
+
+//output
+    Sushma is soo p
+
+// execute a pattern
+#include <stdio.h>
+int main()
+{
+    //left justification
+    printf("%-15s\n","Sushma"); 
+    printf("%-15s\n","Shreyaaa"); 
+    printf("%-15s\n","Medineeee");
+    printf("%-15s\n","Karunyaaaaaa"); 
+    return 0;
+}
+//output
+Sushma         
+Shreyaaa       
+Medineeee      
+Karunyaaaaaa  
+
+
+// execute a pattern
+#include <stdio.h>
+int main()
+{
+    //right justification
+    printf("%15s\n","Sushma"); 
+    printf("%15s\n","Shreyaaa"); 
+    printf("%15s\n","Medineeee");
+    printf("%15s\n","Karunyaaaaaa"); 
+    return 0;
+}
+//output
+         Sushma
+       Shreyaaa
+      Medineeee
+   Karunyaaaaaa
+
+
+// execute a pattern
+#include <stdio.h>
+int main()
+{
+   char *str="Karunya";
+   printf("%7.7s\n",str);
+   printf("%7.6s\n",str);
+   printf("%7.5s\n",str);
+   printf("%7.4s\n",str);
+   printf("%7.3s\n",str);
+   printf("%7.2s\n",str);
+   return 0;
+}
+//output
+arunya
+ Karuny
+  Karun
+   Karu
+    Kar
+     Ka
+
+
+// execute a pattern
+#include <stdio.h>
+int main()
+{
+   char *str="Karunya";
+   printf("%-7.7s\n",str);
+   printf("%-7.6s\n",str);
+   printf("%-7.5s\n",str);
+   printf("%-7.4s\n",str);
+   printf("%-7.3s\n",str);
+   printf("%-7.2s\n",str);
+   return 0;
+}
+//output
+Karunya
+Karuny
+Karun  
+Karu   
+Kar    
+Ka 
+
+// execute a pattern
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[100];
+   scanf("%s",str);
+   int len=strlen(str);
+   for(int i=len;i>=1;i--)
+      printf("%-*.*s\n",len,i,str);
+   return 0;
+}
+//OUTPUT
+ARUNYA
+KARUNYA
+KARUNY 
+KARUN  
+KARU   
+KAR    
+KA     
+K      
+
+
+// execute a pattern
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[100];
+   scanf("%s",str);
+   int len=strlen(str);
+   for(int i=len;i>=1;i--)
+      printf("%-*.*s%-*.*s\n",len,i,str,len,i,str);
+   return 0;
+}
+//output
+karunya
+karunyakarunya
+karuny karuny 
+karun  karun  
+karu   karu   
+kar    kar    
+ka     ka     
+k      k      
+
+
+// execute a pattern
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[100];
+   scanf("%s",str);
+   int len=strlen(str);
+   for(int i=len;i>=1;i--)
+      printf("%-*.*s%*.*s\n",len,i,str,len,i,str);
+   return 0;
+}
+//output
+arunya
+KarunyaKarunya
+Karuny  Karuny
+Karun    Karun
+Karu      Karu
+Kar        Kar
+Ka          Ka
+K            K
+
+
+// execute a pattern
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[100];
+   int len;
+   scanf("%s%n",str,&len);
+   printf("%d\n",len);
+   for(int i=len;i>=1;i--)
+      printf("%-*.*s\n",len,i,str);
+  
+}
+//output
+arunya
+7
+Karunya
+Karuny 
+Karun  
+Karu   
+Kar    
+Ka     
+K      
+
+// execute a pattern
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[100];
+   scanf("%s",str);
+   int len=strlen(str);
+   for(int i=len;i>=1;i--)
+      printf("%-*.*s%*.*s\n",len,i,str,len,i,str);
+   for(int i=1;i<=len;i++)
+      printf("%-*.*s%*.*s\n",len,i,str,len,i,str);
+   return 0;
+}
+//output
+karunya
+karunyakarunya
+karuny  karuny
+karun    karun
+karu      karu
+kar        kar
+ka          ka
+k            k
+k            k
+ka          ka
+kar        kar
+karu      karu
+karun    karun
+karuny  karuny
+karunyakarunya
+
+
+
+// execute a pattern
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[100];
+   scanf("%s",str);
+   int len=strlen(str);
+   for(int i=len;i>=1;i--)
+      printf("%*.*s%-*.*s\n",len,i,str,len,i,str);
+   for(int i=1;i<=len;i++)
+      printf("%*.*s%-*.*s\n",len,i,str,len,i,str);
+   return 0;
+}
+//output
+karunya
+karunyakarunya
+ karunykaruny 
+  karunkarun  
+   karukaru   
+    karkar    
+     kaka     
+      kk      
+      kk      
+     kaka     
+    karkar    
+   karukaru   
+  karunkarun  
+ karunykaruny 
+karunyakarunya
+
+
+/ execute a pattern
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[100];
+   scanf("%s",str);
+   int len=strlen(str);
+   for(int i=1;i<=len;i++)
+      printf("%-*.*s%*.*s\n",len,i,str,len,i,str);
+   for(int i=len;i>=1;i--)
+      printf("%-*.*s%*.*s\n",len,i,str,len,i,str);
+   return 0;
+}
+//output
+karunya
+k            k
+ka          ka
+kar        kar
+karu      karu
+karun    karun
+karuny  karuny
+karunyakarunya
+karunyakarunya
+karuny  karuny
+karun    karun
+karu      karu
+kar        kar
+ka          ka
+k            k
+
+
+// execute a pattern
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[100];
+   scanf("%s",str);
+   int len=strlen(str);
+   for(int i=1;i<=len;i++)
+      printf("%-*.*s%*.*s\n",len,i,str,len,i,str);
+   for(int i=len;i>=1;i--)
+      printf("%*.*s%-*.*s\n",len,i,str,len,i,str);
+   return 0;
+}
+//output
+karunya
+k            k
+ka          ka
+kar        kar
+karu      karu
+karun    karun
+karuny  karuny
+karunyakarunya
+karunyakarunya
+ karunykaruny 
+  karunkarun  
+   karukaru   
+    karkar    
+     kaka     
+      kk      
+
+
+// execute a pattern
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+   char str[100];
+   scanf("%s",str);
+   int len=strlen(str);
+   for(int i=1;i<=len;i++)
+      printf("%*.*s%-*.*s\n",len,i,str,len,i,str);
+   for(int i=len;i>=1;i--)
+      printf("%*.*s%-*.*s\n",len,i,str,len,i,str);
+   return 0;
+}
+//output
+karunya
+      kk      
+     kaka     
+    karkar    
+   karukaru   
+  karunkarun  
+ karunykaruny 
+karunyakarunya
+karunyakarunya
+ karunykaruny 
+  karunkarun  
+   karukaru   
+    karkar    
+     kaka     
+      kk      
+
