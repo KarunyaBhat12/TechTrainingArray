@@ -1,0 +1,107 @@
+//program to print x pattern
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    int len;
+    scanf("%s%n",str,&len);
+    for(int i=0;i<len;i++)
+       printf("%*c\n",i+1,str[i]);
+    return 0;
+}
+//output
+Karunya
+K
+ a
+  r
+   u
+    n
+     y
+      a
+________________________________________________________________________________________________
+
+//program to print x pattern
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    int len,i;
+    scanf("%s%n",str,&len);
+    for(i=1;i<len;i++)
+        printf("%*c%*s%c\n",i,str[i-1],(len*2-(i*2+1)),"", str[i-1]); //(len*2-1)... to give space
+        printf("%*c\n",i,str[i-1]);
+    return 0;
+}
+//output
+karunya
+ k           k
+  a         a
+   r       r
+    u     u
+     n   n
+      y y
+       a
+__________________________________________________________________________________________________
+//program to print x pattern
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    int len,i;
+    scanf("%s%n",str,&len);
+    for(i=1;i<len;i++)
+        printf("%*c%*s%c\n",i,str[i-1],(len*2-(i*2+1)),"", str[i-1]); //(len*2-1)... to give space
+        printf("%*c\n",i,str[i-1]);
+    for(i=len-1;i>=1;i--)
+        printf("%*c%*s%c\n",i,str[i-1],(len*2-(i*2+1)),"", str[i-1]);
+    return 0;
+}
+//output
+karunya
+k           k
+ a         a
+  r       r
+   u     u
+    n   n
+     y y
+      a
+     y y
+    n   n
+   u     u
+  r       r
+ a         a
+k           k
+__________________________________________________________________________________________________
+//program to print x pattern
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    int len,i;
+    scanf("%s%n",str,&len);
+    printf("%*c\n",len,str[len-1]);
+    for(i=len-1;i>=1;i--)
+        printf("%*c%*s%c\n",i,str[i-1],(len*2-(i*2+1)),"", str[i-1]); //(len*2-1)... to give space
+    for(i=1;i<len;i++)
+        printf("%*c%*s%c\n",i,str[i-1],(len*2-(i*2+1)),"", str[i-1]);
+        printf("%*c\n",len,str[len-1]);
+    return 0;
+}
+//output
+karunya
+      a
+     y y
+    n   n
+   u     u
+  r       r
+ a         a
+k           k
+k           k
+ a         a
+  r       r
+   u     u
+    n   n
+     y y
+      a
+__________________________________________________________________________________________________
+
